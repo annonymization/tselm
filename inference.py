@@ -12,9 +12,8 @@ from dataset import TargetDataset
 
 SEED = 1234
 
-
 def main(rank, args):
-    device = args.gpus[rank % len(args.gpus)]
+    device = args.gpus[rank % len(args.gpus)] # t
     world_size = args.proc
     torch.cuda.set_device(device)
     scp = args.scp_dir
